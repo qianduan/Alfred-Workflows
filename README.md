@@ -17,11 +17,11 @@ See the directories for more details.
 
 A workflow for getting the news from qianduan.us.
 
-[\[Download Link\]](https://github.com/qianduan/Alfred-Workflows/raw/master/qd.io.alfredworkflow)
+[\[Download Link\]](https://github.com/qianduan/Alfred-Workflows/raw/master/qianduan.us.alfredworkflow)
 
-![Example 1](https://raw.github.com/qianduan/Alfred-Workflows/master/qianduan/screenshots/1.png)
+![Example 1](https://rawgithub.com/qianduan/Alfred-Workflows/master/qianduan.us/screenshots/1.png)
 
-![Example 2](https://raw.github.com/qianduan/Alfred-Workflows/master/qianduan/screenshots/2.png)
+![Example 2](https://rawgithub.com/qianduan/Alfred-Workflows/master/qianduan.us/screenshots/2.png)
 
 #### Usage
 
