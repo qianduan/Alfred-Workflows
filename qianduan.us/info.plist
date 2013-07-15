@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.alfredapp.leeiio.inews</string>
+	<string>us.qianduan.shenfei</string>
 	<key>connections</key>
 	<dict>
 		<key>B3422CDF-DCA4-43DD-8A89-EF52B8B7CC74</key>
@@ -41,13 +41,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Leeiio</string>
+	<string>shenfei</string>
 	<key>description</key>
-	<string>A workflow for getting the news from iNew.io.</string>
+	<string>qianduan.us workflow</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>iNews.io</string>
+	<string>qd</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -58,7 +58,7 @@
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>keyword</key>
-				<string>inews</string>
+				<string>qd</string>
 				<key>runningsubtext</key>
 				<string>Please wait...</string>
 				<key>script</key>
@@ -67,11 +67,11 @@ $w = new Workflows();
 $query = urlencode( "{query}" );
 
 if($query == "new"){
-	$url = "http://inews.io/api/alfred/latest";
+	$url = "http://qianduan.us/api/alfred/latest";
 	$content = $w-&gt;request( $url );
 	$content_items = json_decode( $content );
 }else{
-	$url = "http://inews.io/api/alfred/index";
+	$url = "http://qianduan.us/api/alfred/index";
 	$content = $w-&gt;request( $url );
 	$content_items = json_decode( $content );	
 }
@@ -102,19 +102,19 @@ function digg_count($count) {
 }
 
 foreach($content_items as $item ):
- 	$w-&gt;result( $item-&gt;id, 'http://inews.io/article/'.$item-&gt;id, $item-&gt;title, $item-&gt;content, digg_count($item-&gt;digg_count) );
+ 	$w-&gt;result( $item-&gt;id, 'http://qianduan.us/p/'.$item-&gt;id, $item-&gt;title, $item-&gt;content, digg_count($item-&gt;digg_count) );
 endforeach;
 
 $results = $w-&gt;results();
 if ( count( $results ) == 0 ):
-  $w-&gt;result( 'inews', 'http://inews.io', 'No News Found.', 'Please visit the inews.io to see what happend :(', 'icon.png' );
+  $w-&gt;result( 'qianduan', 'http://qianduan.us', 'No News Found.', 'Please visit the qianduan.us to see what happend :(', 'icon.png' );
 endif;
 
 echo $w-&gt;toxml();</string>
 				<key>subtext</key>
 				<string>Type "new" for getting latest news</string>
 				<key>title</key>
-				<string>iNews.io News</string>
+				<string>qianduan News</string>
 				<key>type</key>
 				<integer>1</integer>
 				<key>withspace</key>
@@ -146,11 +146,11 @@ echo $w-&gt;toxml();</string>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>inews</string>
+				<string>qd</string>
 				<key>subtext</key>
-				<string>For a list of arguments type "inews help"</string>
+				<string>For a list of arguments type "qd help"</string>
 				<key>text</key>
-				<string>inews help</string>
+				<string>qd help</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -169,7 +169,7 @@ echo $w-&gt;toxml();</string>
 
 if($query == "help"){
 	echo "Available Commands:
-	* new 		— Show the latest news from iNews.io ";
+	* new 		— Show the latest news from qianduan.us ";
 }</string>
 				<key>type</key>
 				<integer>1</integer>
@@ -187,7 +187,7 @@ if($query == "help"){
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>前端界workflow</string>
 	<key>uidata</key>
 	<dict>
 		<key>12A8023E-9457-44E9-9ACB-CAE71DBA62E4</key>
@@ -217,6 +217,6 @@ if($query == "help"){
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>https://github.com/Leeiio/Alfred-Workflows/iNews.io/</string>
+	<string>http://www.qianduan.net</string>
 </dict>
 </plist>
